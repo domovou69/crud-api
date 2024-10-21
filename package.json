@@ -1,9 +1,11 @@
 {
   "name": "crud-api",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "ts-node-dev --respawn src/index.ts",
+    "start:prod": "tsc && node dist/index.ts"
   },
   "keywords": [],
   "author": "Mikhail Yesipchuk",
@@ -12,6 +14,9 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "uuid": "^10.0.0"
+  },
+  "engines": {
+    "node": "22.9.0"
   },
   "devDependencies": {
     "@types/node": "^22.7.7",
